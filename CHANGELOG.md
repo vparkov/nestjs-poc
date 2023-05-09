@@ -1,3 +1,11 @@
+# [1.2.0](https://github.com/vparkov/nestjs-poc/compare/v1.1.0...v1.2.0) (2023-05-09)
+
+
+### Features
+
+* test test ([9503608](https://github.com/vparkov/nestjs-poc/commit/9503608472d63e4485efe8c38c7fbf1b9e549239))
+* testing pipeline comments ([332ff4e](https://github.com/vparkov/nestjs-poc/commit/332ff4efbf2556d449914eeb333d58ea6e8497d1))
+
 # [1.1.0](https://github.com/vparkov/nestjs-poc/compare/v1.0.0...v1.1.0) (2023-05-08)
 
 
