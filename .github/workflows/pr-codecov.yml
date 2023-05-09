@@ -5,6 +5,12 @@ on:
     branches:
       - main # Replace with your default branch name, if different
 
+permissions:
+  checks: write
+  contents: read
+  issues: read
+  pull-requests: write
+
 jobs:
   test:
     runs-on: ubuntu-latest
