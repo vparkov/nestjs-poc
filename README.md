@@ -34,14 +34,14 @@ $ pnpm run test:cov
 
 In this project, we use a combination of Prettier and ESLint for code formatting and linting. To ensure a consistent development experience across the team, please follow these steps to configure Visual Studio Code (VSCode) for this project:
 
-## Prerequisites
+### Prerequisites
 
 1. Install the following VSCode extensions:
    - [Prettier - Code formatter](https://marketplace.visualstudio.com/items?itemName=esbenp.prettier-vscode)
    - [ESLint](https://marketplace.visualstudio.com/items?itemName=dbaeumer.vscode-eslint)
    - [EditorConfig for VS Code](https://marketplace.visualstudio.com/items?itemName=EditorConfig.EditorConfig)
 
-## Configuration
+### Configuration
 
 Add the following settings to your VSCode `settings.json` file:
 
