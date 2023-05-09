@@ -6,4 +6,9 @@ export class AppService {
     console.log('AppService.getHello()');
     return 'Hello World!!!';
   }
+
+  getHello2(): string {
+    console.log('AppService.getHello2()');
+    return 'Hello World2!!!';
+  }
 }
