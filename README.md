@@ -45,7 +45,7 @@ In this project, we use a combination of Prettier and ESLint for code formatting
 
 Add the following settings to your VSCode `settings.json` file:
 
-\```json
+```json
 {
   "editor.formatOnSave": false,
   "editor.codeActionsOnSave": {
@@ -55,7 +55,7 @@ Add the following settings to your VSCode `settings.json` file:
   "prettier.requireConfig": true,
   "prettier.configPath": ".prettierrc"
 }
-\```
+```
 
 ### Explanation
 
