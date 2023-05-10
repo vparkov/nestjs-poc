@@ -1,4 +1,9 @@
-# Installation
+# NestJS POC
+
+[![codecov](https://codecov.io/gh/vparkov/nestjs-poc/branch/main/graph/badge.svg?token=JT1TN8APBT)](https://codecov.io/gh/vparkov/nestjs-poc)
+[![Coveralls Status](https://coveralls.io/repos/github/vparkov/nestjs-poc/badge.svg)](https://coveralls.io/github/vparkov/nestjs-poc)
+
+## Installation
 
 ```bash
 pnpm install
@@ -59,6 +64,30 @@ $ pnpm run test:e2e
 
 # test coverage
 $ pnpm run test:cov
+```
+
+## Utils
+
+### PNPM
+
+```bash
+# Install a package and add it to dependencies.
+$ pnpm add sax
+
+# Install a package and add it to devDependencies.
+$ pnpm add -D sax
+
+# Checks for known security issues with the installed packages.
+$ pnpm audit
+
+# Checks for outdated packages.
+$ pnpm outdated
+
+# Updates all dependencies, adhering to ranges specified in package.json
+$ pnpm up
+
+# Updates all dependencies, ignoring ranges specified in package.json
+$ pnpm up --latest
 ```
 
 ## Visual Studio Code Configuration
