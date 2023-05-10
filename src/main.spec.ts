@@ -1,4 +1,8 @@
 import { NestFactory } from '@nestjs/core';
+import {
+  FastifyAdapter,
+  NestFastifyApplication,
+} from '@nestjs/platform-fastify';
 import { AppModule } from './app.module';
 import * as main from './main';
 
@@ -12,6 +16,13 @@ jest.mock('@nestjs/core', () => {
   };
 });
 
+jest.mock('@nestjs/platform-fastify', () => {
+  return {
+    FastifyAdapter: jest.fn(),
+    NestFastifyApplication: {},
+  };
+});
+
 describe('Main', () => {
   it('should bootstrap the application', async () => {
     const createSpy = jest.spyOn(NestFactory, 'create');
@@ -20,7 +31,7 @@ describe('Main', () => {
 
     await main.bootstrap();
 
-    expect(createSpy).toBeCalledWith(AppModule);
-    expect(listenSpy).toBeCalledWith(3000);
+    expect(createSpy).toBeCalledWith(AppModule, expect.any(FastifyAdapter));
+    expect(listenSpy).toBeCalledWith(3000, '0.0.0.0');
   });
 });

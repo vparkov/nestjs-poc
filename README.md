@@ -61,6 +61,30 @@ $ pnpm run test:e2e
 $ pnpm run test:cov
 ```
 
+## Utils
+
+### PNPM
+
+```bash
+# Install a package and add it to dependencies.
+$ pnpm add sax
+
+# Install a package and add it to devDependencies.
+$ pnpm add -D sax
+
+# Checks for known security issues with the installed packages.
+$ pnpm audit
+
+# Checks for outdated packages.
+$ pnpm outdated
+
+# Updates all dependencies, adhering to ranges specified in package.json
+$ pnpm up
+
+# Updates all dependencies, ignoring ranges specified in package.json
+$ pnpm up --latest
+```
+
 ## Visual Studio Code Configuration
 
 In this project, we use a combination of Prettier and ESLint for code formatting and linting. To ensure a consistent development experience across the team, please follow these steps to configure Visual Studio Code (VSCode) for this project:
