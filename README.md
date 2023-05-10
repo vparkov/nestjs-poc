@@ -6,6 +6,10 @@ pnpm install
 
 ## Running the app
 
+### Without Docker
+
+To run the application without Docker, use the following commands:
+
 ```bash
 # development
 $ pnpm run start
@@ -15,6 +19,33 @@ $ pnpm run start:dev
 
 # production mode
 $ pnpm run start:prod
+```
+
+### With Docker
+
+To run the application with Docker, use the following commands:
+
+```bash
+# build the Docker image for development
+docker build -t nestjs-app-dev --target development .
+# or
+pnpm run docker:build:dev
+
+# start the Docker container for development
+docker run --rm -it -p 3000:3000 --name nestjs-app-dev -v $(pwd):/usr/src/app -v /usr/src/app/node_modules nestjs-app-dev
+# or
+pnpm run docker:run:dev
+
+# build the Docker image for production
+docker build -t nestjs-app-prod --target production .
+# or
+pnpm run docker:build:prod
+
+# start the Docker container for production
+docker run --rm -it -p 3000:3000 --name nestjs-app-prod nestjs-app-prod
+# or
+pnpm run docker:run:prod
+
 ```
 
 ## Test
