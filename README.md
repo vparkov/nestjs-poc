@@ -1,4 +1,9 @@
-# Installation
+# NestJS POC
+
+[![codecov](https://codecov.io/gh/vparkov/nestjs-poc/branch/main/graph/badge.svg?token=JT1TN8APBT)](https://codecov.io/gh/vparkov/nestjs-poc)
+[![Coveralls Status](https://coveralls.io/repos/github/vparkov/nestjs-poc/badge.svg)](https://coveralls.io/github/vparkov/nestjs-poc)
+
+## Installation
 
 ```bash
 pnpm install
