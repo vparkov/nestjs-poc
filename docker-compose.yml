@@ -1,0 +1,32 @@
+version: '3.8'
+services:
+  app:
+    build:
+      context: .
+      target: development
+    volumes:
+      - .:/usr/src/app:delegated
+      # node modules are not mounted from the local file system because of performance issues
+      # they are installed in the docker container
+      - /usr/src/app/node_modules
+    ports:
+      - 3000:3000
+    environment:
+      DATABASE_URL: postgres://user:password@db:5432/dbname
+    depends_on:
+      - db
+
+  db:
+    image: postgres:13
+    restart: always
+    environment:
+      POSTGRES_USER: user
+      POSTGRES_PASSWORD: password
+      POSTGRES_DB: dbname
+    volumes:
+      - db_data:/var/lib/postgresql/data
+    ports:
+      - 5432:5432
+
+volumes:
+  db_data:

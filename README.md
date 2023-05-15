@@ -28,30 +28,39 @@ $ pnpm run start:prod
 
 ### With Docker
 
-To run the application with Docker, use the following commands:
+We use Docker Compose to manage our application's services. Here are the commands to manage the lifecycle of your application:
 
-```bash
-# build the Docker image for development
-docker build -t nestjs-app-dev --target development .
-# or
-pnpm run docker:build:dev
+- **Build Docker images**
 
-# start the Docker container for development
-docker run --rm -it -p 3000:3000 --name nestjs-app-dev -v $(pwd):/usr/src/app -v /usr/src/app/node_modules nestjs-app-dev
-# or
-pnpm run docker:run:dev
+    This command builds your Docker images according to the `docker-compose.yml` file.
 
-# build the Docker image for production
-docker build -t nestjs-app-prod --target production .
-# or
-pnpm run docker:build:prod
+    ```bash
+    npm run docker:build
+    ```
 
-# start the Docker container for production
-docker run --rm -it -p 3000:3000 --name nestjs-app-prod nestjs-app-prod
-# or
-pnpm run docker:run:prod
+- **Start Docker containers**
 
-```
+    This command starts your Docker containers. It also creates any necessary networks and volumes, and it might build images if they haven't been built already.
+
+    ```bash
+    npm run docker:up
+    ```
+
+    If you want to run the containers in the background (detached mode), you can use the `-d` flag:
+
+    ```bash
+    npm run docker:up -d
+    ```
+
+- **Stop Docker containers**
+
+    This command stops your Docker containers. It also removes the containers, networks, and volumes defined in your `docker-compose.yml` file.
+
+    ```bash
+    npm run docker:down
+    ```
+
+These commands serve to shorten and standardize the Docker Compose commands we use frequently. You can add more scripts based on your use case and workflow.
 
 ## Test
 
